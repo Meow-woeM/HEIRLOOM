@@ -245,6 +245,8 @@ data class BalanceConfig(
     val offlineCapHoursBase: Double = 10.0,
     /** Granularity of offline fast-forward, in game-days. */
     val offlineStepDays: Double = 1.0,
+    /** Don't bother with the "While you were away" sheet for absences shorter than this. */
+    val offlineSummaryMinAwaySeconds: Double = 60.0,
 
     // ----------------------------------------------------------- monetization
     val rewardedAdHours: Double = 4.0,

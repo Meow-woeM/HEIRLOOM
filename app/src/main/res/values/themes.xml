@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Heirloom" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#F3EAD8</item>
+        <item name="android:statusBarColor">#2A2118</item>
+    </style>
+</resources>
