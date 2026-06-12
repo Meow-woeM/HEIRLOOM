@@ -67,6 +67,8 @@ class GameViewModel @Inject constructor(
                 summary = caughtUp.second
             }
             state = state.copy(lastRealTimeMillis = System.currentTimeMillis())
+            // Billing may have reported ownership before the save finished loading.
+            if (supporterStore.supporterActive.value) state = state.copy(supporter = true)
             _ui.value = GameUiState(state, summary)
             repo.save(state)
             booted = true
