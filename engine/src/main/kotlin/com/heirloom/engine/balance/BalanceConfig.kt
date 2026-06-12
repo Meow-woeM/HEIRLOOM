@@ -37,7 +37,8 @@ data class BalanceConfig(
     val retirementMinAgeYears: Double = 40.0,
 
     // ------------------------------------------------------------- resources
-    val newGameResources: Resources = Resources(food = 25.0),
+    /** The wagon arrives provisioned: enough food that day 1 isn't pure survival grinding. */
+    val newGameResources: Resources = Resources(food = 150.0),
     /** Daily food upkeep at Era 1; scales by [upkeepEraFactor] per era (the family grows). */
     val baseFoodUpkeepPerDay: Double = 1.0,
     val upkeepEraFactor: Double = 2.5,
@@ -216,10 +217,15 @@ data class BalanceConfig(
 
     // -------------------------------------------------------------- monuments
     /** Cost to found a Monument (already requires Era 6). Scales by [monumentCostGrowth]^n. */
-    val monumentBaseCost: Resources = Resources(materials = 2.0e9, money = 1.5e9, standing = 200_000.0),
-    val monumentCostGrowth: Double = 7.0,
+    val monumentBaseCost: Resources = Resources(materials = 1.4e9, money = 1.0e9, standing = 140_000.0),
+    val monumentCostGrowth: Double = 9.0,
     /** All yields *= (1 + this * monuments). */
     val monumentYieldBonusEach: Double = 1.0,
+    /**
+     * Founders' renown: posterity grants *= (1 + this * monuments). Keeps post-Monument
+     * cycles accelerating (the prestige wave) even though posterity itself resets.
+     */
+    val monumentPosterityBonusEach: Double = 0.30,
     val mechanicUnlocks: Map<Int, MechanicUnlock> = mapOf(
         1 to MechanicUnlock.AUTOMATION,
         2 to MechanicUnlock.STARTING_ERA_BUMP,

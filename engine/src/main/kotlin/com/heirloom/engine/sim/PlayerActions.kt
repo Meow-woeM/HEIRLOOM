@@ -8,6 +8,7 @@ import com.heirloom.engine.model.GameState
 import com.heirloom.engine.model.LogKind
 import com.heirloom.engine.model.MechanicUnlock
 import com.heirloom.engine.model.SkillId
+import com.heirloom.engine.model.VentureId
 
 /**
  * Everything the player can do, as pure (state) -> state functions. Each action has a
@@ -89,6 +90,78 @@ object PlayerActions {
 
     fun startNextGeneration(state: GameState, config: BalanceConfig): GameState =
         GenerationManager.startNextGeneration(state, config)
+
+    // ------------------------------------------------------------- ventures
+
+    /** Posterity price of the next rank, or null when maxed out. */
+    fun ventureCost(state: GameState, id: VentureId, config: BalanceConfig): Double? =
+        config.ventureSpecs.getValue(id).costForRank(state.ventureRank(id))
+
+    /** Ventures are buyable any time — the Legacy screen is just the natural place. */
+    fun canBuyVenture(state: GameState, id: VentureId, config: BalanceConfig): Boolean {
+        val cost = ventureCost(state, id, config) ?: return false
+        return state.posterity >= cost
+    }
+
+    fun buyVenture(state: GameState, id: VentureId, config: BalanceConfig): GameState {
+        require(canBuyVenture(state, id, config)) { "Cannot buy $id" }
+        val cost = ventureCost(state, id, config)!!
+        return state.copy(
+            posterity = state.posterity - cost,
+            ventures = state.ventures + (id to state.ventureRank(id) + 1),
+        )
+    }
+
+    // ------------------------------------------------------------ monuments
+
+    fun canFoundMonument(state: GameState, config: BalanceConfig): Boolean =
+        MonumentManager.canFound(state, config)
+
+    fun foundMonument(state: GameState, config: BalanceConfig): GameState =
+        MonumentManager.found(state, config)
+
+    // ----------------------------------------------------------- automation
+
+    fun setAutomation(
+        state: GameState,
+        enabled: Boolean,
+        priorities: List<ActivityId>,
+        config: BalanceConfig,
+    ): GameState {
+        if (enabled) {
+            require(state.hasMechanic(MechanicUnlock.AUTOMATION, config)) { "Automation is not unlocked" }
+        }
+        return state.copy(automationEnabled = enabled, automationPriorities = priorities)
+    }
+
+    // --------------------------------------------- rewarded ads / traveler
+
+    /**
+     * "A traveler lends a hand": +[BalanceConfig.rewardedAdHours] of instant progress,
+     * limited per real day. The caller supplies the real epoch day so the engine stays
+     * clock-free. Supporters press the same button for free — same engine path.
+     */
+    fun canWatchAd(state: GameState, nowEpochDay: Long, config: BalanceConfig): Boolean {
+        if (state.isLegacyPending) return false
+        val used = if (nowEpochDay != state.lastAdEpochDay) 0 else state.adsUsedToday
+        return used < config.maxRewardedAdsPerDay
+    }
+
+    fun watchRewardedAd(state: GameState, nowEpochDay: Long, config: BalanceConfig): OfflineResult {
+        require(canWatchAd(state, nowEpochDay, config)) { "No traveler boosts left today" }
+        val used = if (nowEpochDay != state.lastAdEpochDay) 0 else state.adsUsedToday
+        val counted = state.copy(
+            adsUsedToday = used + 1,
+            lastAdEpochDay = nowEpochDay,
+            stats = state.stats.copy(adsWatched = state.stats.adsWatched + 1),
+        )
+        return OfflineProgressCalculator.apply(
+            counted,
+            config.rewardedAdHours * 3600.0,
+            config,
+            bypassCap = true,
+        )
+    }
 
     internal fun appendLog(state: GameState, logs: List<EventLogEntry>, config: BalanceConfig): GameState =
         if (logs.isEmpty()) state

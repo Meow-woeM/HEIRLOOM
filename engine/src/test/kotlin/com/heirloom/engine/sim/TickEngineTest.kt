@@ -16,7 +16,7 @@ class TickEngineTest {
         val start = T.newState().copy(activeSkill = null)
         val result = TickEngine.tick(start, 1.0, cfg)
         val yield1 = cfg.activityBaseYields.getValue(ActivityId.FORAGE)
-        assertEquals(25.0 + yield1 - 1.0, result.state.resources.food, 1e-9)
+        assertEquals(start.resources.food + yield1 - 1.0, result.state.resources.food, 1e-9)
         assertEquals(yield1, result.state.lifetimeEarned.food, 1e-9)
         assertEquals(yield1 * 0.3, result.state.valueScoreThisMonument, 1e-9, "food weights 0.3 into the value score")
         assertEquals(1.0, result.state.totalGameDays, 1e-12)

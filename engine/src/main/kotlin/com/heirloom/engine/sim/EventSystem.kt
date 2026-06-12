@@ -131,6 +131,19 @@ object EventSystem {
         return days * daily * ratio
     }
 
-    private fun standingWindfall(state: GameState, config: BalanceConfig, base: Double): Double =
-        base * Math.pow(state.era.index.toDouble(), config.standingEventEraPower)
+    /**
+     * Standing windfalls behave like standing *yields*: they scale with era, Community
+     * skill, the Quilt, the Preacher's Circuit and the global multipliers — otherwise
+     * standing (events are its only source before the Village era) could never keep
+     * pace with era requirements as the line prospers.
+     */
+    private fun standingWindfall(state: GameState, config: BalanceConfig, base: Double): Double {
+        val community = 1.0 + config.communityStandingYieldPerLevel *
+            state.skillLevel(com.heirloom.engine.model.SkillId.COMMUNITY)
+        return base * Math.pow(state.era.index.toDouble(), config.standingEventEraPower) *
+            community *
+            YieldCalculator.heirloomYieldFactor(state, ResourceType.STANDING, config) *
+            YieldCalculator.ventureYieldFactor(state, ResourceType.STANDING, config) *
+            YieldCalculator.globalFactor(state, config)
+    }
 }

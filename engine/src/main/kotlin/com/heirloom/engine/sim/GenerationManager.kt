@@ -71,7 +71,8 @@ object GenerationManager {
         val gavel = if (state.hasHeirloom(HeirloomId.FOUNDERS_GAVEL)) {
             1.0 + config.heirloomEffects.foundersGavelPosterityBonus
         } else 1.0
-        return floor(rawDelta * gavel)
+        val renown = 1.0 + config.monumentPosterityBonusEach * state.monuments
+        return floor(rawDelta * gavel * renown)
     }
 
     /** Ends the life (death or retirement): final heirloom check, posterity payout, Legacy screen. */

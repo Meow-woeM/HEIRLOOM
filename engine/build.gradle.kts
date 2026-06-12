@@ -21,6 +21,11 @@ application {
     mainClass.set("com.heirloom.engine.runner.HeadlessRunnerKt")
 }
 
+tasks.named<JavaExec>("run") {
+    // SIMULATION.md lands in the repository root.
+    workingDir = rootDir
+}
+
 dependencies {
     api(libs.kotlinx.serialization.json)
 

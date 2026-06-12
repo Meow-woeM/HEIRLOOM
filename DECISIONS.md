@@ -62,3 +62,13 @@ A running log, one line of rationale each. Newest entries at the bottom of each 
 - **Railroad Arrives fires deterministically on entering Era 5** (once per life), not from the random pool — it's a milestone beat, not weather.
 - **Merchant/County Fair windfalls = N days of the active activity's yield converted to money via the value-score weights** — scales with progression without a separate economy table.
 - **Automation v1 = priority list + built-in food-reserve failsafe (30 days of upkeep)** — covers the dominant micro pattern (keep food up, otherwise grind the bottleneck) without a rules DSL.
+- **Standing windfalls scale like standing yields** (Community skill, Quilt, Preacher's Circuit, global factors) — events are standing's only source before the Village era, and flat windfalls could never keep pace with era requirements.
+
+## M2 — simulation-driven balance tuning (see SIMULATION.md)
+- **Starting food 25 → 150** ("the wagon arrives provisioned") — otherwise the whole first day is survival grinding and generation 1 retires still on the Trail, missing the day-1 pacing target.
+- **Monument cost 2e9/1.5e9/200K → 1.4e9/1e9/140K, growth ×7 → ×9** — pulls Monument 1 into week 3–4 and spaces the rest ~6–8 real days apart.
+- **Added "founders' renown": posterity grants ×(1 + 0.30 × monuments)** — without it the post-Monument trough was brutal (Monument 2 took 23 real days; the +100% yield bonus alone is tiny against the ×10⁴ multiplier wall). This is a design addition beyond the kickoff; it's what delivers the "each subsequent Monument initially faster" prestige wave.
+- **Simulator strategy is a competent human, not an optimizer**: food reserve ≈ 120 spring-days early / a winter-year later; ventures bought greedily at ≤35% of held posterity; retire when payout ≥ 90% of held (young line) / 40% (established); never retire at Railroad+ — those lives commit to the City push.
+- **Seed sensitivity accepted**: structural windows (day-1 loop, Era 5 in week 2, Monument 1 day 15–28, completion day 42–70, zero dead days) hold on every seed tested; lucky seeds overshoot the soft count bands (7 heirlooms in week 1 vs 4–6, 6 monuments by day 56 vs 3–5) because the "≤5 by day 56" and "completion ≤ day 70" bands leave only a ~10-day corridor — narrower than early-event luck. Revisit after real playtests.
+- **Ad speedup measures ~35–45%** vs the spec's "~25–35% faster" — the +4h/press × 3/day sizing is pinned by the kickoff; honoring the sizing over the derived percentage. Tunable via `rewardedAdHours`.
+- **Reference simulation seed 1867**; `./gradlew :engine:run --args="SIMULATION.md <days> <seed>"` regenerates everything including a seed-sweep table.
