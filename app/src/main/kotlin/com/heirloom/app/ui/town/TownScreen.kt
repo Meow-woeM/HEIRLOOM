@@ -48,6 +48,8 @@ fun TownScreen(state: GameState, vm: GameViewModel) {
         items(count = Era.entries.size) { index ->
             EraRow(state, Era.entries[index], vm)
         }
+        item { SupporterCard(state, vm) }
+        item { SettingsCard(state, vm) }
         item { Spacer(Modifier.height(24.dp)) }
     }
 }

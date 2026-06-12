@@ -27,8 +27,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.heirloom.app.game.GameViewModel
 import com.heirloom.app.ui.compact
+import com.heirloom.app.ui.findActivity
 import com.heirloom.app.ui.stamp
 import com.heirloom.app.ui.title
 import com.heirloom.app.ui.vista.TownVista
@@ -176,6 +178,8 @@ private fun LatestNews(state: GameState, vm: GameViewModel) {
 @Composable
 private fun TravelerCard(state: GameState, vm: GameViewModel) {
     val config = vm.config
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val adsReady by vm.ads.ready.collectAsStateWithLifecycle()
     val epochDay = System.currentTimeMillis() / 86_400_000L
     val used = if (epochDay != state.lastAdEpochDay) 0 else state.adsUsedToday
     val left = (config.maxRewardedAdsPerDay - used).coerceAtLeast(0)
@@ -190,14 +194,26 @@ private fun TravelerCard(state: GameState, vm: GameViewModel) {
                 Text("A traveler lends a hand", style = MaterialTheme.typography.titleMedium)
                 Text(
                     "+${config.rewardedAdHours.toInt()} hours of progress · $left left today" +
-                        if (state.supporter) " · yours freely" else "",
+                        when {
+                            state.supporter -> " · yours freely"
+                            else -> " · a short ad"
+                        },
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
             OutlinedButton(
-                onClick = vm::grantTravelerBoost,
-                enabled = PlayerActions.canWatchAd(state, epochDay, config),
+                onClick = {
+                    if (state.supporter) {
+                        vm.grantTravelerBoost()
+                    } else {
+                        context.findActivity()?.let { activity ->
+                            vm.ads.show(activity) { vm.grantTravelerBoost() }
+                        }
+                    }
+                },
+                enabled = PlayerActions.canWatchAd(state, epochDay, config) &&
+                    (state.supporter || adsReady),
             ) { Text("Welcome them") }
         }
     }

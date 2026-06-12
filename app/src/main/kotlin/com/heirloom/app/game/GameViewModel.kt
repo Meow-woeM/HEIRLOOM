@@ -3,6 +3,8 @@ package com.heirloom.app.game
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.heirloom.app.data.SaveRepository
+import com.heirloom.app.monetization.RewardedAds
+import com.heirloom.app.monetization.SupporterStore
 import com.heirloom.engine.balance.BalanceConfig
 import com.heirloom.engine.model.ActivityId
 import com.heirloom.engine.model.GameState
@@ -37,6 +39,8 @@ data class GameUiState(
 class GameViewModel @Inject constructor(
     private val repo: SaveRepository,
     val config: BalanceConfig,
+    val supporterStore: SupporterStore,
+    val ads: RewardedAds,
 ) : ViewModel() {
 
     private val _ui = MutableStateFlow(GameUiState())
@@ -47,6 +51,12 @@ class GameViewModel @Inject constructor(
     private var foreground = false
 
     init {
+        // Ownership is one-way: the entitlement can only ever turn the flag on.
+        viewModelScope.launch {
+            supporterStore.supporterActive.collect { owned ->
+                if (owned) mutate { if (it.supporter) it else it.copy(supporter = true) }
+            }
+        }
         viewModelScope.launch {
             val loaded = repo.load()
             var state = loaded ?: GameState.newGame(config, System.currentTimeMillis())
@@ -158,12 +168,23 @@ class GameViewModel @Inject constructor(
         mutate { PlayerActions.watchRewardedAd(it, epochDay, config).state }
     }
 
-    fun setSupporter(active: Boolean) = mutate { it.copy(supporter = active) }
-
     fun dismissOfflineSummary() = _ui.update { it.copy(offlineSummary = null) }
 
-    override fun onCleared() {
-        // Best-effort final stamp; autosave has us covered within 30s regardless.
-        super.onCleared()
+    // -------------------------------------------------------------- settings
+
+    suspend fun exportSave(): String? = repo.exportJson()
+
+    fun importSave(text: String, onResult: (Boolean) -> Unit) {
+        viewModelScope.launch {
+            val imported = repo.importJson(text)
+            if (imported == null) {
+                onResult(false)
+                return@launch
+            }
+            val stamped = imported.copy(lastRealTimeMillis = System.currentTimeMillis())
+            _ui.value = GameUiState(stamped, offlineSummary = null)
+            repo.save(stamped)
+            onResult(true)
+        }
     }
 }

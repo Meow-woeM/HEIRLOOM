@@ -1,5 +1,6 @@
 package com.heirloom.app.ui.legacy
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -15,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.heirloom.app.game.GameViewModel
 import com.heirloom.app.ui.compact
+import com.heirloom.app.ui.findActivity
 import com.heirloom.app.ui.main.SectionTitle
 import com.heirloom.engine.model.GameState
 import com.heirloom.engine.model.HeirloomId
@@ -66,22 +68,57 @@ private fun VentureRow(state: GameState, venture: VentureId, vm: GameViewModel) 
     }
 }
 
-/** Earned heirlooms with flavor; locked ones as silhouettes with their condition. */
+private val Gold = androidx.compose.ui.graphics.Color(0xFFC9A227)
+
+/**
+ * Earned heirlooms with flavor; locked ones as silhouettes with their condition.
+ * Supporters get the golden frame; non-supporters get exactly one quiet shelf slot
+ * mentioning the pack (the only other surface is the Town settings card).
+ */
 @Composable
 fun HeirloomShelfSection(state: GameState, vm: GameViewModel) {
+    val context = androidx.compose.ui.platform.LocalContext.current
     Column {
         SectionTitle("Heirloom shelf — ${state.heirlooms.size}/${HeirloomId.entries.size}")
         HeirloomId.entries.forEach { heirloom ->
             val earned = state.hasHeirloom(heirloom)
             Column(Modifier.padding(vertical = 4.dp)) {
                 Text(
-                    if (earned) heirloom.displayName else "◌ ${heirloom.displayName}",
+                    when {
+                        earned && state.supporter -> "❖ ${heirloom.displayName}"
+                        earned -> heirloom.displayName
+                        else -> "◌ ${heirloom.displayName}"
+                    },
                     style = MaterialTheme.typography.bodyLarge,
-                    color = if (earned) MaterialTheme.colorScheme.onSurface
-                    else MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = when {
+                        earned && state.supporter -> Gold
+                        earned -> MaterialTheme.colorScheme.onSurface
+                        else -> MaterialTheme.colorScheme.onSurfaceVariant
+                    },
                 )
                 Text(
                     if (earned) heirloom.flavor else HeirloomChecker.conditionText(heirloom, vm.config),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+        }
+        if (!state.supporter) {
+            Column(
+                Modifier
+                    .fillMaxWidth()
+                    .clickable {
+                        context.findActivity()?.let { vm.supporterStore.launchPurchase(it) }
+                    }
+                    .padding(vertical = 4.dp),
+            ) {
+                Text(
+                    "❖ The Family Legacy",
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = Gold.copy(alpha = 0.7f),
+                )
+                Text(
+                    "A one-time gift to the maker: no ads, 2× yields, a golden shelf.",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

@@ -87,3 +87,12 @@ A running log, one line of rationale each. Newest entries at the bottom of each 
 - **Events UI = "Latest News" one-liner on the main screen + the Chronicle tab** (full log, newest first). Per-event popups cut — v1 events have no choices, so a modal would only interrupt.
 - **Numbers animate via animateFloatAsState on the displayed value** (~600ms glide); Float precision is fine for display formatting.
 - **Automation UI is deliberately small**: a switch plus tap-to-toggle ordered priority list; the engine's food-reserve failsafe is described, not configurable, in v1.
+
+## M5 — Monetization & release prep
+- **Two interfaces (`SupporterStore`, `RewardedAds`) wall off the SDKs** — the engine and its tests never see billing/ads; store-free builds can bind stubs in one Hilt module.
+- **The supporter flag is one-way**: the billing entitlement can only ever set `GameState.supporter = true`; nothing in the app revokes it (refunds are Play's concern, not the save's).
+- **Traveler flow**: supporters press the same button for free (same engine path and daily cap); non-supporters get the rewarded ad, with the grant only on the earned-reward callback. Failed/absent ad loads just leave the button disabled — offline is this game's normal state.
+- **Settings live as "Town Hall" cards on the Town tab** (tick-speed/offline-cap display, save export/import, attribution note, Supporter Pack) — a fifth nav tab for four rows wasn't worth it.
+- **Save export/import goes through the clipboard** with an explicit confirm-replace dialog; no SAF file pickers in v1. Import refuses anything `SaveCodec` can't decode.
+- **Supporter Pack surfaces in exactly two places** (golden shelf slot on the Legacy screen, Town Hall card) and never interrupts play, per spec.
+- **Ad/billing IDs are TODO test constants** (`AdMobRewardedAds.kt`, `PlayBillingSupporterStore.kt`, manifest meta-data) — flagged for release.
