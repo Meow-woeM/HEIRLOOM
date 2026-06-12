@@ -1,5 +1,7 @@
 package com.heirloom.app.ui.main
 
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,11 +23,15 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.heirloom.app.game.GameViewModel
 import com.heirloom.app.ui.compact
+import com.heirloom.app.ui.stamp
+import com.heirloom.app.ui.title
+import com.heirloom.app.ui.vista.TownVista
 import com.heirloom.engine.model.ActivityId
 import com.heirloom.engine.model.Era
 import com.heirloom.engine.model.GameState
@@ -46,9 +52,12 @@ fun MainScreen(state: GameState, vm: GameViewModel) {
         contentPadding = androidx.compose.foundation.layout.PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
+        item { TownVista(state, config) }
         item { HeaderCard(state, vm) }
         item { ResourceBar(state, vm) }
+        item { LatestNews(state, vm) }
         item { EraCard(state, vm) }
+        item { TravelerCard(state, vm) }
         if (PlayerActions.canRetire(state, config) || GenerationManager.posterityPreview(state, config) > 0) {
             item { RetireCard(state, vm) }
         }
@@ -138,11 +147,58 @@ private fun ResourceBar(state: GameState, vm: GameViewModel) {
 
 @Composable
 private fun ResourceCell(label: String, amount: Double, note: String? = null) {
+    // Numbers glide instead of jumping (Float precision is plenty for display).
+    val animated by animateFloatAsState(
+        targetValue = amount.toFloat(),
+        animationSpec = tween(durationMillis = 600),
+        label = "resource-$label",
+    )
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(label, style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-        Text(amount.compact(), style = MaterialTheme.typography.titleMedium)
+        Text(animated.toDouble().compact(), style = MaterialTheme.typography.titleMedium)
         if (note != null) {
             Text(note, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+    }
+}
+
+@Composable
+private fun LatestNews(state: GameState, vm: GameViewModel) {
+    val latest = state.eventLog.lastOrNull() ?: return
+    Text(
+        "“${latest.title()}” — ${latest.stamp(vm.config)}",
+        style = MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier.padding(horizontal = 4.dp),
+    )
+}
+
+@Composable
+private fun TravelerCard(state: GameState, vm: GameViewModel) {
+    val config = vm.config
+    val epochDay = System.currentTimeMillis() / 86_400_000L
+    val used = if (epochDay != state.lastAdEpochDay) 0 else state.adsUsedToday
+    val left = (config.maxRewardedAdsPerDay - used).coerceAtLeast(0)
+    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Column(Modifier.weight(1f)) {
+                Text("A traveler lends a hand", style = MaterialTheme.typography.titleMedium)
+                Text(
+                    "+${config.rewardedAdHours.toInt()} hours of progress · $left left today" +
+                        if (state.supporter) " · yours freely" else "",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            }
+            OutlinedButton(
+                onClick = vm::grantTravelerBoost,
+                enabled = PlayerActions.canWatchAd(state, epochDay, config),
+            ) { Text("Welcome them") }
         }
     }
 }

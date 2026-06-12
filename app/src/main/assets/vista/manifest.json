@@ -1,0 +1,10 @@
+{
+  "_readme": [
+    "Drop licensed pixel-art vista scenes (PNG, ~360x140 logical px, 16/32px tiles) into",
+    "this directory and list them under 'stages' keyed by VistaStage name. Stages without",
+    "an entry use the built-in placeholder silhouettes. Integer scaling + FilterQuality.None",
+    "are applied automatically — author at exact pixel sizes, never pre-scale.",
+    "Record every pack in ATTRIBUTION.md. CC0 preferred; never NC/ND licenses."
+  ],
+  "stages": {}
+}

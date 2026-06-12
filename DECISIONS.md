@@ -72,3 +72,18 @@ A running log, one line of rationale each. Newest entries at the bottom of each 
 - **Seed sensitivity accepted**: structural windows (day-1 loop, Era 5 in week 2, Monument 1 day 15–28, completion day 42–70, zero dead days) hold on every seed tested; lucky seeds overshoot the soft count bands (7 heirlooms in week 1 vs 4–6, 6 monuments by day 56 vs 3–5) because the "≤5 by day 56" and "completion ≤ day 70" bands leave only a ~10-day corridor — narrower than early-event luck. Revisit after real playtests.
 - **Ad speedup measures ~35–45%** vs the spec's "~25–35% faster" — the +4h/press × 3/day sizing is pinned by the kickoff; honoring the sizing over the derived percentage. Tunable via `rewardedAdHours`.
 - **Reference simulation seed 1867**; `./gradlew :engine:run --args="SIMULATION.md <days> <seed>"` regenerates everything including a seed-sweep table.
+
+## M3 — Android shell
+- **Saves: Preferences DataStore with two string keys (primary + last-good backup)** rather than a custom DataStore serializer — every write rolls the previous save into the backup slot, load tries primary then backup; simplest correct corruption story on top of DataStore's own file-level handler.
+- **Single-activity lifecycle drives the loop**: the 1s ticker only runs while the activity is started; everything else is the offline calculator's job (background, process death, reboot — all the same code path).
+- **VM action errors are swallowed** (`mutate()` catches IllegalArgument/IllegalState): the UI gates buttons with the engine's `can*()` predicates, so a failure can only be a race with the ticker — dropping it is correct.
+- **No splash/loading tech**: the "Unpacking the wagon…" frame lasts one DataStore read.
+
+## M4 — Full UI
+- **Tabs (Homestead/Family/Town/Chronicle) via bottom NavigationBar**, text glyphs (⌂ ✦ ⚒ ✎) as icons — no nav drawer (spec), no icon-pack dependency, no navigation-compose graph for 4 static tabs.
+- **Legacy screen is a forced full-screen takeover** while `pendingLegacy` is set (tabs hidden — the moment deserves the stage); the Family tab shows the same ventures shop + heirloom shelf during life, plus the posterity counter and "retire now for +N" preview.
+- **Vista placeholders are Canvas silhouettes on a 360×140 design grid** with season-tinted gradient skies; one statue appears in the square per Monument from the Founded City stage on. Licensed art swaps in via `assets/vista/manifest.json` (FilterQuality.None, FillBounds) with zero code changes.
+- **Stage reveals = in-place crossfade + a 4s toast overlay**; no separate celebration screen.
+- **Events UI = "Latest News" one-liner on the main screen + the Chronicle tab** (full log, newest first). Per-event popups cut — v1 events have no choices, so a modal would only interrupt.
+- **Numbers animate via animateFloatAsState on the displayed value** (~600ms glide); Float precision is fine for display formatting.
+- **Automation UI is deliberately small**: a switch plus tap-to-toggle ordered priority list; the engine's food-reserve failsafe is described, not configurable, in v1.
