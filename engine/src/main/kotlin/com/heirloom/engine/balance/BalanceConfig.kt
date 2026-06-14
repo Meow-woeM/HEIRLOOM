@@ -108,13 +108,17 @@ data class BalanceConfig(
     ),
 
     // ------------------------------------------------------------------- eras
-    /** Cost to ENTER an era. Growth ~x50 per step (spec: x40-80). Standing gates Village+. */
+    /**
+     * Cost to ENTER an era. Growth ~x50 per step (spec: x40-80). Standing gates Village+.
+     * Whole ladder scaled to ~1/4 of the original magnitudes to target a ~4-5 week
+     * completion (every step keeps its ~50x ratio — see BalanceSanityTest).
+     */
     val eraCosts: Map<Era, Resources> = mapOf(
-        Era.CLAIM to Resources(materials = 60.0, money = 40.0),
-        Era.HOMESTEAD to Resources(materials = 3_000.0, money = 2_000.0),
-        Era.VILLAGE to Resources(materials = 150_000.0, money = 100_000.0, standing = 500.0),
-        Era.RAILROAD to Resources(materials = 7_500_000.0, money = 5_000_000.0, standing = 5_000.0),
-        Era.CITY to Resources(materials = 375_000_000.0, money = 250_000_000.0, standing = 50_000.0),
+        Era.CLAIM to Resources(materials = 15.0, money = 10.0),
+        Era.HOMESTEAD to Resources(materials = 750.0, money = 500.0),
+        Era.VILLAGE to Resources(materials = 37_500.0, money = 25_000.0, standing = 125.0),
+        Era.RAILROAD to Resources(materials = 1_875_000.0, money = 1_250_000.0, standing = 1_250.0),
+        Era.CITY to Resources(materials = 93_750_000.0, money = 62_500_000.0, standing = 12_500.0),
     ),
     /** Global yield bonus per era index beyond 1 (infrastructure compounds). */
     val eraYieldBonusPerEra: Double = 0.25,
@@ -145,6 +149,13 @@ data class BalanceConfig(
         EventType.NEWCOMERS to 8.0,
     ),
     val eventDurationDays: Double = 7.0,
+    /**
+     * Bad-luck floor. If this many game-days pass within a run without a beneficial
+     * windfall (merchant / barn-raising / county-fair / newcomers), the next day-boundary
+     * forces one. Keeps unlucky runs from stalling — standing's only pre-Village source
+     * is events, so a long dry spell otherwise gates era progress purely on luck. 0 = off.
+     */
+    val eventPityDays: Double = 14.0,
     val droughtFoodYieldFactor: Double = 0.5,
     val goodRainsFoodYieldBonus: Double = 0.30,
     val locustsFoodLossFraction: Double = 0.30,
@@ -216,9 +227,13 @@ data class BalanceConfig(
     val almanacWinterRelief: Double = 0.25,
 
     // -------------------------------------------------------------- monuments
-    /** Cost to found a Monument (already requires Era 6). Scales by [monumentCostGrowth]^n. */
-    val monumentBaseCost: Resources = Resources(materials = 1.4e9, money = 1.0e9, standing = 140_000.0),
-    val monumentCostGrowth: Double = 9.0,
+    /**
+     * Cost to found a Monument (already requires Era 6). Scales by [monumentCostGrowth]^n.
+     * Base and growth tuned down (from 1.4e9 / x9) so the 6-monument endgame fits the
+     * ~4-5 week completion target instead of dominating it.
+     */
+    val monumentBaseCost: Resources = Resources(materials = 3.08e8, money = 2.2e8, standing = 30_800.0),
+    val monumentCostGrowth: Double = 2.5,
     /** All yields *= (1 + this * monuments). */
     val monumentYieldBonusEach: Double = 1.0,
     /**

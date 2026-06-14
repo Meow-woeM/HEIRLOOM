@@ -50,7 +50,7 @@ class EraTest {
         val broke = T.newState()
         assertFalse(PlayerActions.canAdvanceEra(broke, cfg))
 
-        val funded = broke.copy(resources = Resources(food = 25.0, materials = 60.0, money = 40.0))
+        val funded = broke.copy(resources = Resources(food = 25.0, materials = 15.0, money = 10.0))
         assertTrue(PlayerActions.canAdvanceEra(funded, cfg))
         val advanced = PlayerActions.advanceEra(funded, cfg)
         assertEquals(Era.CLAIM, advanced.era)
@@ -71,8 +71,8 @@ class EraTest {
         )
         val cost = CostCalculator.eraCost(s, Era.CLAIM, cfg)
         val costFactor = 1.0 / (1.0 + 0.008 * 10) * 0.9 * 0.8
-        assertEquals(40.0 * costFactor, cost.money, 1e-9)
-        assertEquals(60.0 * costFactor * Math.pow(0.99, 10.0), cost.materials, 1e-9, "craftsmanship trims the materials share")
+        assertEquals(10.0 * costFactor, cost.money, 1e-9)
+        assertEquals(15.0 * costFactor * Math.pow(0.99, 10.0), cost.materials, 1e-9, "craftsmanship trims the materials share")
     }
 
     @Test

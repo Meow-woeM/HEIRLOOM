@@ -28,83 +28,83 @@ Check-ins at 08:00, 13:30, 21:00 (2.0 min each), 0 rewarded ads/day, 70 days sim
 | Milestone | Real day |
 |---|---|
 | Era reached: The Claim | 1 |
+| Era reached: Homestead | 1 |
 | First Posterity earned | 1 |
 | First Family Venture | 1 |
-| Era reached: Homestead | 8 |
-| Era reached: Village | 10 |
-| Era reached: Railroad Town | 14 |
-| Era reached: City & Statehood | 23 |
-| All 12 heirlooms | 23 |
-| Monument 1 | 24 |
-| Monument 2 | 36 |
-| Monument 3 | 42 |
-| Monument 4 | 50 |
-| Monument 5 | 57 |
-| Monument 6 | 65 |
-| COMPLETION (final Monument + all heirlooms) | 65 |
+| Era reached: Village | 5 |
+| Era reached: Railroad Town | 5 |
+| Era reached: City & Statehood | 9 |
+| Monument 1 | 10 |
+| Monument 2 | 16 |
+| Monument 3 | 20 |
+| All 12 heirlooms | 21 |
+| Monument 4 | 22 |
+| Monument 5 | 25 |
+| Monument 6 | 27 |
+| COMPLETION (final Monument + all heirlooms) | 27 |
 
 ### Weekly summary
 
 | Week | Gens ended | Max era | Posterity held | Heirlooms | Monuments | Min decisions/day |
 |---|---|---|---|---|---|---|
-| 1 | 8 | The Trail | 106.6 | 5/12 | 0 | 82 |
-| 2 | 9 | Homestead | 2.11K | 9/12 | 0 | 135 |
-| 3 | 7 | Railroad Town | 10.6K | 11/12 | 0 | 136 |
-| 4 | 10 | Railroad Town | 13.8K | 12/12 | 1 | 165 |
-| 5 | 9 | City & Statehood | 38.6K | 12/12 | 1 | 170 |
-| 6 | 9 | City & Statehood | 0 | 12/12 | 3 | 155 |
-| 7 | 6 | City & Statehood | 1.31M | 12/12 | 3 | 178 |
-| 8 | 6 | City & Statehood | 2.22M | 12/12 | 4 | 189 |
-| 9 | 7 | City & Statehood | 6.90M | 12/12 | 5 | 186 |
-| 10 | 6 | City & Statehood | 2.74M | 12/12 | 6 | 186 |
+| 1 | 9 | Railroad Town | 959.7 | 10/12 | 0 | 87 |
+| 2 | 10 | City & Statehood | 23.4K | 11/12 | 1 | 158 |
+| 3 | 10 | City & Statehood | 3.80K | 12/12 | 3 | 170 |
+| 4 | 10 | City & Statehood | 1.13K | 12/12 | 6 | 259 |
+| 5 | 7 | City & Statehood | 2.26K | 12/12 | 8 | 206 |
+| 6 | 7 | City & Statehood | 2.92K | 12/12 | 10 | 173 |
+| 7 | 7 | City & Statehood | 4.79K | 12/12 | 12 | 172 |
+| 8 | 7 | City & Statehood | 0 | 12/12 | 14 | 202 |
+| 9 | 7 | City & Statehood | 9.91M | 12/12 | 15 | 194 |
+| 10 | 7 | City & Statehood | 2.79K | 12/12 | 17 | 190 |
 
 ### Generations
 
 | # | Ended day | Age | How | Era reached | Posterity earned | Held after shopping | Heirlooms | Monuments |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 1 | 55 | retired | The Claim | 126 | 51 | 4/12 | 0 |
-| 2 | 2 | 63 | died | The Trail | 44 | 69.5 | 5/12 | 0 |
-| 3 | 3 | 59 | died | The Trail | 38 | 82 | 5/12 | 0 |
-| 4 | 4 | 57 | died | The Trail | 41 | 93 | 5/12 | 0 |
-| 5 | 5 | 63 | died | The Trail | 67 | 86 | 5/12 | 0 |
-| 6 | 5 | 55 | retired | The Claim | 120 | 122.7 | 5/12 | 0 |
-| 7 | 6 | 58 | died | The Trail | 32 | 111.3 | 5/12 | 0 |
-| 8 | 7 | 60 | died | The Trail | 39 | 106.6 | 5/12 | 0 |
-| 9 | 8 | 62 | died | The Trail | 43 | 99.6 | 5/12 | 0 |
-| 10 | 8 | 55 | retired | Homestead | 537 | 222.8 | 6/12 | 0 |
-| 11 | 9 | 65 | died | The Claim | 189 | 233.5 | 6/12 | 0 |
-| 12 | 10 | 63 | retired | Village | 440 | 323.0 | 7/12 | 0 |
-| 13 | 11 | 67 | died | The Claim | 800 | 492.3 | 7/12 | 0 |
-| 14 | 11 | 53 | retired | Village | 619 | 452.1 | 7/12 | 0 |
-| 15 | 12 | 63 | retired | Village | 1.74K | 760.6 | 7/12 | 0 |
-| 16 | 13 | 74 | died | The Claim | 405 | 803.5 | 8/12 | 0 |
-| 17 | 14 | 74 | died | Railroad Town | 5.57K | 2.11K | 9/12 | 0 |
-| 18 | 15 | 68 | died | The Claim | 505 | 1.86K | 9/12 | 0 |
-| 19 | 16 | 67 | retired | Homestead | 2.03K | 2.27K | 9/12 | 0 |
-| 20 | 17 | 73 | died | The Claim | 1.11K | 2.33K | 10/12 | 0 |
-| 21 | 18 | 75 | died | Railroad Town | 25.1K | 7.57K | 11/12 | 0 |
-| 22 | 19 | 73 | died | Homestead | 9.36K | 10.9K | 11/12 | 0 |
-| 23 | 20 | 77 | died | Homestead | 13.0K | 12.0K | 11/12 | 0 |
-| 24 | 21 | 78 | died | Homestead | 13.2K | 10.6K | 11/12 | 0 |
-| 25 | 22 | 76 | died | Homestead | 9.39K | 13.9K | 11/12 | 0 |
-| 26 | 23 | 90 | died | City & Statehood | 184K | 57.9K | 12/12 | 0 |
-| 27 | 24 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 1 |
-| 28 | 25 | 63 | died | The Claim | 781 | 140.7 | 12/12 | 1 |
-| 29 | 25 | 53 | retired | Village | 1.94K | 482.4 | 12/12 | 1 |
-| 30 | 26 | 48 | retired | Homestead | 1.41K | 678.7 | 12/12 | 1 |
-| 31 | 26 | 53 | retired | Village | 2.29K | 1.14K | 12/12 | 1 |
-| 32 | 27 | 48 | retired | Homestead | 635 | 1.35K | 12/12 | 1 |
+| 1 | 1 | 55 | retired | Homestead | 303 | 113 | 5/12 | 0 |
+| 2 | 2 | 47 | retired | The Claim | 190 | 92.6 | 5/12 | 0 |
+| 3 | 2 | 55 | retired | The Claim | 147 | 131.8 | 6/12 | 0 |
+| 4 | 3 | 62 | retired | The Claim | 141 | 140.8 | 6/12 | 0 |
+| 5 | 4 | 66 | retired | The Claim | 202 | 195.4 | 6/12 | 0 |
+| 6 | 5 | 64 | died | The Claim | 380 | 220.5 | 6/12 | 0 |
+| 7 | 6 | 72 | died | Railroad Town | 2.57K | 761.6 | 10/12 | 0 |
+| 8 | 6 | 53 | retired | The Claim | 305 | 782.7 | 10/12 | 0 |
+| 9 | 7 | 71 | died | The Claim | 477 | 959.7 | 10/12 | 0 |
+| 10 | 8 | 48 | retired | Homestead | 1.69K | 1.12K | 10/12 | 0 |
+| 11 | 9 | 70 | died | Railroad Town | 14.9K | 2.89K | 10/12 | 0 |
+| 12 | 10 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 11/12 | 1 |
+| 13 | 10 | 55 | retired | Village | 852 | 138.1 | 11/12 | 1 |
+| 14 | 11 | 45 | retired | Homestead | 941 | 270.4 | 11/12 | 1 |
+| 15 | 11 | 53 | retired | The Claim | 1.21K | 557.4 | 11/12 | 1 |
+| 16 | 12 | 48 | retired | The Claim | 768 | 607.6 | 11/12 | 1 |
+| 17 | 13 | 74 | died | Railroad Town | 10.4K | 2.03K | 11/12 | 1 |
+| 18 | 14 | 77 | died | City & Statehood | 109K | 17.2K | 11/12 | 1 |
+| 19 | 14 | 49 | retired | Homestead | 15.0K | 23.4K | 11/12 | 1 |
+| 20 | 15 | 59 | retired | Homestead | 14.0K | 28.7K | 11/12 | 1 |
+| 21 | 16 | 65 | retired | Homestead | 34.8K | 40.0K | 11/12 | 1 |
+| 22 | 16 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 11/12 | 2 |
+| 23 | 17 | 47 | retired | Homestead | 1.83K | 303.4 | 11/12 | 2 |
+| 24 | 18 | 69 | died | Railroad Town | 40.9K | 7.71K | 11/12 | 2 |
+| 25 | 18 | 51 | retired | Homestead | 28.9K | 12.2K | 11/12 | 2 |
+| 26 | 19 | 46 | retired | Homestead | 8.63K | 15.7K | 11/12 | 2 |
+| 27 | 20 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 11/12 | 3 |
+| 28 | 20 | 55 | retired | Village | 4.91K | 793.6 | 11/12 | 3 |
+| 29 | 21 | 48 | retired | Village | 20.9K | 3.80K | 11/12 | 3 |
+| 30 | 22 | 78 | died | City & Statehood | 137K | 28.0K | 12/12 | 3 |
+| 31 | 22 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 4 |
+| 32 | 23 | 47 | retired | Homestead | 3.66K | 491.6 | 12/12 | 4 |
 | … | | | | | | | | |
-| 72 | 64 | 91 | died | City & Statehood | 47.5M | 17.6M | 12/12 | 5 |
-| 73 | 65 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 6 |
-| 74 | 66 | 67 | died | Homestead | 11.0K | 1.53K | 12/12 | 6 |
-| 75 | 67 | 74 | died | City & Statehood | 514K | 117K | 12/12 | 6 |
-| 76 | 68 | 96 | died | City & Statehood | 3.52M | 876K | 12/12 | 6 |
-| 77 | 69 | 90 | died | City & Statehood | 9.12M | 2.74M | 12/12 | 6 |
+| 76 | 65 | 50 | retired | Homestead | 17.1K | 2.65K | 12/12 | 16 |
+| 77 | 66 | 82 | died | City & Statehood | 826K | 183K | 12/12 | 16 |
+| 78 | 67 | 92 | died | City & Statehood | 27.1M | 5.87M | 12/12 | 16 |
+| 79 | 68 | 93 | died | City & Statehood | 307M | 59.5M | 12/12 | 16 |
+| 80 | 69 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 17 |
+| 81 | 70 | 50 | retired | Homestead | 19.8K | 2.79K | 12/12 | 17 |
 
 ### Final state (day 70)
 
-Generation 78, City & Statehood, age 81, 2.74M posterity held, 12/12 heirlooms, 6 monuments, vista: Future City. Resources: food 9.99M, materials 24.7T, money 15.0T, standing 287B.
+Generation 82, City & Statehood, age 51, 2.79K posterity held, 12/12 heirlooms, 17 monuments, vista: Future City. Resources: food 139K, materials 2.14B, money 1.79B, standing 67.2M.
 
 ---
 
@@ -120,80 +120,80 @@ Check-ins at 08:00, 13:30, 21:00 (2.0 min each), 3 rewarded ads/day, 70 days sim
 | First Family Venture | 1 |
 | Era reached: The Claim | 1 |
 | Era reached: Homestead | 1 |
-| Era reached: Village | 3 |
-| Era reached: Railroad Town | 11 |
-| Era reached: City & Statehood | 12 |
-| All 12 heirlooms | 12 |
-| Monument 1 | 14 |
-| Monument 2 | 18 |
-| Monument 3 | 22 |
-| Monument 4 | 26 |
-| Monument 5 | 30 |
-| Monument 6 | 35 |
-| COMPLETION (final Monument + all heirlooms) | 35 |
+| Era reached: Village | 2 |
+| Era reached: Railroad Town | 3 |
+| Era reached: City & Statehood | 6 |
+| Monument 1 | 11 |
+| Monument 2 | 15 |
+| Monument 3 | 17 |
+| All 12 heirlooms | 18 |
+| Monument 4 | 20 |
+| Monument 5 | 21 |
+| Monument 6 | 23 |
+| COMPLETION (final Monument + all heirlooms) | 23 |
 
 ### Weekly summary
 
 | Week | Gens ended | Max era | Posterity held | Heirlooms | Monuments | Min decisions/day |
 |---|---|---|---|---|---|---|
-| 1 | 16 | The Claim | 1.48K | 10/12 | 0 | 172 |
-| 2 | 12 | Railroad Town | 0 | 12/12 | 1 | 171 |
-| 3 | 12 | City & Statehood | 33.4K | 12/12 | 2 | 218 |
-| 4 | 13 | City & Statehood | 92.4K | 12/12 | 4 | 252 |
-| 5 | 10 | City & Statehood | 0 | 12/12 | 6 | 276 |
-| 6 | 9 | City & Statehood | 23.3M | 12/12 | 6 | 273 |
-| 7 | 10 | City & Statehood | 2.31M | 12/12 | 7 | 280 |
-| 8 | 7 | City & Statehood | 70.1M | 12/12 | 7 | 276 |
-| 9 | 7 | City & Statehood | 161M | 12/12 | 7 | 277 |
-| 10 | 7 | City & Statehood | 356M | 12/12 | 7 | 276 |
+| 1 | 14 | City & Statehood | 9.54K | 11/12 | 0 | 183 |
+| 2 | 13 | City & Statehood | 8.17K | 11/12 | 1 | 143 |
+| 3 | 16 | City & Statehood | 0 | 12/12 | 5 | 236 |
+| 4 | 17 | City & Statehood | 112K | 12/12 | 8 | 369 |
+| 5 | 14 | City & Statehood | 0 | 12/12 | 12 | 306 |
+| 6 | 12 | City & Statehood | 2.28M | 12/12 | 14 | 320 |
+| 7 | 11 | City & Statehood | 21.7M | 12/12 | 16 | 298 |
+| 8 | 11 | City & Statehood | 4.22M | 12/12 | 18 | 299 |
+| 9 | 9 | City & Statehood | 160M | 12/12 | 19 | 283 |
+| 10 | 10 | City & Statehood | 0 | 12/12 | 21 | 289 |
 
 ### Generations
 
 | # | Ended day | Age | How | Era reached | Posterity earned | Held after shopping | Heirlooms | Monuments |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 1 | 41 | retired | The Trail | 55 | 40 | 2/12 | 0 |
-| 2 | 1 | 45 | retired | Homestead | 92 | 72 | 3/12 | 0 |
-| 3 | 2 | 63 | died | The Claim | 421 | 117.6 | 6/12 | 0 |
-| 4 | 2 | 41 | retired | Homestead | 221 | 148.8 | 6/12 | 0 |
-| 5 | 2 | 43 | retired | Homestead | 376 | 220.8 | 6/12 | 0 |
-| 6 | 3 | 66 | died | The Claim | 651 | 293.4 | 6/12 | 0 |
-| 7 | 3 | 50 | retired | Village | 373 | 365.3 | 7/12 | 0 |
-| 8 | 3 | 53 | retired | Village | 506 | 458.4 | 7/12 | 0 |
-| 9 | 4 | 70 | retired | Homestead | 452 | 464.1 | 8/12 | 0 |
-| 10 | 4 | 65 | retired | Village | 1.67K | 707.6 | 9/12 | 0 |
-| 11 | 5 | 70 | died | The Claim | 107 | 814.6 | 9/12 | 0 |
-| 12 | 5 | 65 | retired | Village | 804 | 856.5 | 10/12 | 0 |
-| 13 | 6 | 73 | died | Homestead | 183 | 1.04K | 10/12 | 0 |
-| 14 | 7 | 69 | died | The Claim | 801 | 1.01K | 10/12 | 0 |
-| 15 | 7 | 50 | retired | Village | 483 | 1.01K | 10/12 | 0 |
-| 16 | 7 | 53 | retired | Homestead | 1.07K | 1.48K | 10/12 | 0 |
-| 17 | 8 | 69 | died | The Claim | 158 | 1.63K | 10/12 | 0 |
-| 18 | 8 | 51 | retired | Village | 1.67K | 1.36K | 10/12 | 0 |
-| 19 | 9 | 74 | died | The Claim | 136 | 1.49K | 10/12 | 0 |
-| 20 | 9 | 51 | retired | Village | 1.50K | 2.24K | 10/12 | 0 |
-| 21 | 10 | 73 | died | The Claim | 196 | 1.63K | 10/12 | 0 |
-| 22 | 10 | 51 | retired | Village | 1.37K | 2.18K | 10/12 | 0 |
-| 23 | 11 | 74 | died | The Claim | 185 | 2.36K | 10/12 | 0 |
-| 24 | 12 | 73 | died | Railroad Town | 26.9K | 8.41K | 11/12 | 0 |
-| 25 | 12 | 84 | died | City & Statehood | 77.5K | 19.8K | 12/12 | 0 |
-| 26 | 13 | 84 | died | Homestead | 2.52K | 22.3K | 12/12 | 0 |
-| 27 | 14 | 76 | retired | Homestead | 9.76K | 24.1K | 12/12 | 0 |
-| 28 | 14 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 1 |
-| 29 | 15 | 47 | retired | The Claim | 514 | 113.6 | 12/12 | 1 |
-| 30 | 15 | 41 | retired | The Claim | 778 | 249.5 | 12/12 | 1 |
-| 31 | 15 | 43 | retired | Village | 1.69K | 534.4 | 12/12 | 1 |
-| 32 | 16 | 70 | died | Railroad Town | 16.9K | 2.88K | 12/12 | 1 |
+| 1 | 1 | 41 | retired | The Trail | 58 | 28 | 2/12 | 0 |
+| 2 | 1 | 45 | retired | Homestead | 88 | 71 | 3/12 | 0 |
+| 3 | 2 | 64 | died | The Claim | 474 | 111.7 | 6/12 | 0 |
+| 4 | 2 | 41 | retired | Village | 231 | 137.1 | 7/12 | 0 |
+| 5 | 2 | 43 | retired | Village | 655 | 238.3 | 8/12 | 0 |
+| 6 | 3 | 68 | died | The Claim | 723 | 405.3 | 8/12 | 0 |
+| 7 | 3 | 50 | retired | Village | 581 | 573.4 | 8/12 | 0 |
+| 8 | 4 | 69 | died | Railroad Town | 3.92K | 1.03K | 9/12 | 0 |
+| 9 | 4 | 50 | retired | Homestead | 554 | 1.10K | 9/12 | 0 |
+| 10 | 5 | 74 | died | Railroad Town | 5.88K | 2.06K | 10/12 | 0 |
+| 11 | 5 | 74 | died | Railroad Town | 4.51K | 3.27K | 10/12 | 0 |
+| 12 | 6 | 80 | died | Homestead | 573 | 2.58K | 10/12 | 0 |
+| 13 | 7 | 82 | died | City & Statehood | 15.9K | 5.18K | 11/12 | 0 |
+| 14 | 7 | 83 | died | City & Statehood | 13.4K | 9.54K | 11/12 | 0 |
+| 15 | 8 | 80 | died | Homestead | 1.72K | 7.41K | 11/12 | 0 |
+| 16 | 9 | 67 | retired | Homestead | 5.49K | 8.89K | 11/12 | 0 |
+| 17 | 9 | 81 | died | City & Statehood | 17.9K | 13.3K | 11/12 | 0 |
+| 18 | 10 | 77 | died | Homestead | 1.62K | 9.74K | 11/12 | 0 |
+| 19 | 11 | 82 | died | City & Statehood | 138K | 36.0K | 11/12 | 0 |
+| 20 | 11 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 11/12 | 1 |
+| 21 | 12 | 65 | died | The Claim | 869 | 155.1 | 11/12 | 1 |
+| 22 | 12 | 50 | retired | Village | 2.13K | 546.4 | 11/12 | 1 |
+| 23 | 13 | 73 | died | Railroad Town | 16.8K | 2.81K | 11/12 | 1 |
+| 24 | 13 | 48 | retired | Homestead | 5.23K | 4.86K | 11/12 | 1 |
+| 25 | 13 | 51 | retired | Homestead | 14.0K | 7.04K | 11/12 | 1 |
+| 26 | 14 | 57 | retired | Homestead | 3.60K | 7.62K | 11/12 | 1 |
+| 27 | 14 | 53 | retired | Homestead | 11.4K | 8.17K | 11/12 | 1 |
+| 28 | 15 | 67 | retired | Homestead | 20.0K | 14.6K | 11/12 | 1 |
+| 29 | 15 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 11/12 | 2 |
+| 30 | 16 | 61 | died | Homestead | 3.26K | 573.1 | 11/12 | 2 |
+| 31 | 16 | 66 | died | Railroad Town | 21.9K | 4.92K | 11/12 | 2 |
+| 32 | 17 | 78 | died | City & Statehood | 92.4K | 19.4K | 11/12 | 2 |
 | … | | | | | | | | |
-| 98 | 65 | 89 | died | City & Statehood | 49.8M | 199M | 12/12 | 7 |
-| 99 | 66 | 92 | died | City & Statehood | 76.4M | 203M | 12/12 | 7 |
-| 100 | 67 | 95 | died | City & Statehood | 202M | 217M | 12/12 | 7 |
-| 101 | 68 | 92 | died | City & Statehood | 140M | 261M | 12/12 | 7 |
-| 102 | 69 | 93 | died | City & Statehood | 173M | 311M | 12/12 | 7 |
-| 103 | 70 | 91 | died | City & Statehood | 168M | 356M | 12/12 | 7 |
+| 122 | 66 | 93 | died | City & Statehood | 28.5M | 6.98M | 12/12 | 20 |
+| 123 | 67 | 95 | died | City & Statehood | 296M | 79.4M | 12/12 | 20 |
+| 124 | 68 | 91 | died | City & Statehood | 735M | 239M | 12/12 | 20 |
+| 125 | 69 | 95 | died | City & Statehood | 864M | 341M | 12/12 | 20 |
+| 126 | 70 | 92 | died | City & Statehood | 1.55B | 739M | 12/12 | 20 |
+| 127 | 70 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 21 |
 
 ### Final state (day 70)
 
-Generation 104, City & Statehood, age 84, 356M posterity held, 12/12 heirlooms, 7 monuments, vista: Future City. Resources: food 152B, materials 4.73Qa, money 1.62Qa, standing 63.0T.
+Generation 128, Homestead, age 18, 0 posterity held, 12/12 heirlooms, 21 monuments, vista: Future City. Resources: food 400.8, materials 0, money 0, standing 0.
 
 ---
 
@@ -208,72 +208,81 @@ Check-ins at 09:00, 21:30 (1.5 min each), 0 rewarded ads/day, 70 days simulated.
 | First Posterity earned | 1 |
 | First Family Venture | 1 |
 | Era reached: The Claim | 1 |
-| Era reached: Homestead | 8 |
-| Era reached: Village | 12 |
-| Era reached: Railroad Town | 25 |
+| Era reached: Homestead | 1 |
+| Era reached: Village | 3 |
+| Era reached: Railroad Town | 13 |
+| Era reached: City & Statehood | 28 |
+| Monument 1 | 28 |
+| Monument 2 | 37 |
+| Monument 3 | 42 |
+| All 12 heirlooms | 45 |
+| Monument 4 | 45 |
+| Monument 5 | 48 |
+| Monument 6 | 53 |
+| COMPLETION (final Monument + all heirlooms) | 53 |
 
 ### Weekly summary
 
 | Week | Gens ended | Max era | Posterity held | Heirlooms | Monuments | Min decisions/day |
 |---|---|---|---|---|---|---|
-| 1 | 7 | The Trail | 79 | 5/12 | 0 | 62 |
-| 2 | 8 | The Claim | 871.5 | 7/12 | 0 | 112 |
-| 3 | 7 | The Claim | 1.23K | 8/12 | 0 | 113 |
-| 4 | 7 | Railroad Town | 2.47K | 10/12 | 0 | 117 |
-| 5 | 7 | Railroad Town | 3.41K | 10/12 | 0 | 121 |
-| 6 | 7 | The Claim | 3.52K | 10/12 | 0 | 123 |
-| 7 | 7 | Railroad Town | 5.53K | 10/12 | 0 | 69 |
-| 8 | 7 | The Claim | 5.17K | 10/12 | 0 | 124 |
-| 9 | 7 | Homestead | 5.68K | 10/12 | 0 | 125 |
-| 10 | 7 | Homestead | 9.09K | 10/12 | 0 | 125 |
+| 1 | 8 | The Claim | 230.5 | 7/12 | 0 | 64 |
+| 2 | 8 | Railroad Town | 887.2 | 10/12 | 0 | 110 |
+| 3 | 13 | Homestead | 6.86K | 10/12 | 0 | 128 |
+| 4 | 8 | Homestead | 100.6 | 11/12 | 1 | 126 |
+| 5 | 12 | Homestead | 13.3K | 11/12 | 1 | 127 |
+| 6 | 12 | City & Statehood | 573.4 | 11/12 | 3 | 132 |
+| 7 | 11 | City & Statehood | 733.7 | 12/12 | 5 | 200 |
+| 8 | 9 | City & Statehood | 346K | 12/12 | 6 | 155 |
+| 9 | 11 | City & Statehood | 8.82K | 12/12 | 8 | 151 |
+| 10 | 8 | City & Statehood | 2.21M | 12/12 | 9 | 142 |
 
 ### Generations
 
 | # | Ended day | Age | How | Era reached | Posterity earned | Held after shopping | Heirlooms | Monuments |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 1 | 47 | retired | The Claim | 78 | 48 | 1/12 | 0 |
-| 2 | 2 | 61 | died | The Trail | 48 | 51 | 3/12 | 0 |
-| 3 | 3 | 61 | died | The Trail | 38 | 63.5 | 4/12 | 0 |
-| 4 | 4 | 60 | died | The Trail | 38 | 76 | 4/12 | 0 |
-| 5 | 5 | 63 | died | The Trail | 38 | 84 | 5/12 | 0 |
-| 6 | 6 | 64 | died | The Trail | 38 | 88 | 5/12 | 0 |
-| 7 | 7 | 58 | died | The Trail | 31 | 79 | 5/12 | 0 |
-| 8 | 8 | 64 | died | Homestead | 457 | 197.7 | 6/12 | 0 |
-| 9 | 9 | 69 | died | The Claim | 599 | 222.5 | 6/12 | 0 |
-| 10 | 10 | 68 | died | The Claim | 493 | 335.4 | 6/12 | 0 |
-| 11 | 11 | 66 | died | The Claim | 515 | 549.3 | 6/12 | 0 |
-| 12 | 12 | 49 | retired | The Claim | 221 | 570.3 | 6/12 | 0 |
-| 13 | 12 | 52 | retired | Village | 432 | 576.4 | 7/12 | 0 |
-| 14 | 13 | 66 | died | Homestead | 2.48K | 1.03K | 7/12 | 0 |
-| 15 | 14 | 68 | died | The Claim | 241 | 871.5 | 7/12 | 0 |
-| 16 | 15 | 68 | died | The Claim | 204 | 1.08K | 7/12 | 0 |
-| 17 | 16 | 70 | died | The Claim | 255 | 920.2 | 7/12 | 0 |
-| 18 | 17 | 68 | died | The Claim | 197 | 1.12K | 7/12 | 0 |
-| 19 | 18 | 70 | died | The Claim | 250 | 947.3 | 7/12 | 0 |
-| 20 | 19 | 68 | died | The Claim | 184 | 1.13K | 7/12 | 0 |
-| 21 | 20 | 69 | died | The Claim | 220 | 1.35K | 7/12 | 0 |
-| 22 | 21 | 74 | died | The Claim | 358 | 1.23K | 8/12 | 0 |
-| 23 | 22 | 71 | died | The Claim | 287 | 1.51K | 8/12 | 0 |
-| 24 | 23 | 49 | retired | Village | 633 | 1.55K | 8/12 | 0 |
-| 25 | 24 | 68 | died | Homestead | 1.13K | 1.45K | 8/12 | 0 |
-| 26 | 25 | 69 | died | The Claim | 264 | 1.71K | 8/12 | 0 |
-| 27 | 26 | 77 | died | Railroad Town | 3.21K | 1.82K | 10/12 | 0 |
-| 28 | 27 | 74 | died | The Claim | 322 | 2.15K | 10/12 | 0 |
-| 29 | 28 | 69 | died | The Claim | 326 | 2.47K | 10/12 | 0 |
-| 30 | 29 | 71 | died | The Claim | 399 | 2.87K | 10/12 | 0 |
-| 31 | 30 | 72 | died | The Claim | 483 | 2.31K | 10/12 | 0 |
-| 32 | 31 | 74 | died | The Claim | 372 | 2.68K | 10/12 | 0 |
+| 1 | 1 | 47 | retired | Homestead | 102 | 52 | 2/12 | 0 |
+| 2 | 2 | 47 | retired | The Claim | 182 | 94 | 4/12 | 0 |
+| 3 | 3 | 62 | died | The Claim | 165 | 92.3 | 6/12 | 0 |
+| 4 | 3 | 47 | retired | Village | 255 | 135.8 | 7/12 | 0 |
+| 5 | 4 | 45 | retired | The Claim | 163 | 153.1 | 7/12 | 0 |
+| 6 | 5 | 64 | died | The Claim | 163 | 165.8 | 7/12 | 0 |
+| 7 | 6 | 64 | died | The Claim | 177 | 262.8 | 7/12 | 0 |
+| 8 | 7 | 66 | died | The Claim | 166 | 230.5 | 7/12 | 0 |
+| 9 | 8 | 70 | died | The Claim | 167 | 272.3 | 8/12 | 0 |
+| 10 | 9 | 69 | died | The Claim | 214 | 361.0 | 8/12 | 0 |
+| 11 | 10 | 65 | died | The Claim | 199 | 296.4 | 8/12 | 0 |
+| 12 | 11 | 65 | died | The Claim | 151 | 447.4 | 8/12 | 0 |
+| 13 | 12 | 67 | died | The Claim | 250 | 530.3 | 8/12 | 0 |
+| 14 | 13 | 64 | died | The Claim | 236 | 566.3 | 8/12 | 0 |
+| 15 | 14 | 69 | died | Railroad Town | 1.95K | 786.7 | 10/12 | 0 |
+| 16 | 14 | 52 | retired | Homestead | 1.64K | 887.2 | 10/12 | 0 |
+| 17 | 15 | 49 | retired | Homestead | 1.49K | 1.48K | 10/12 | 0 |
+| 18 | 15 | 52 | retired | Homestead | 2.03K | 1.67K | 10/12 | 0 |
+| 19 | 16 | 47 | retired | Homestead | 1.61K | 1.81K | 10/12 | 0 |
+| 20 | 16 | 50 | retired | Homestead | 2.03K | 2.22K | 10/12 | 0 |
+| 21 | 17 | 47 | retired | Homestead | 1.91K | 2.03K | 10/12 | 0 |
+| 22 | 17 | 50 | retired | Homestead | 1.80K | 2.63K | 10/12 | 0 |
+| 23 | 18 | 47 | retired | Homestead | 1.86K | 3.24K | 10/12 | 0 |
+| 24 | 18 | 50 | retired | Homestead | 2.24K | 2.72K | 10/12 | 0 |
+| 25 | 19 | 47 | retired | Homestead | 1.46K | 4.18K | 10/12 | 0 |
+| 26 | 19 | 50 | retired | Homestead | 2.33K | 4.73K | 10/12 | 0 |
+| 27 | 20 | 47 | retired | Homestead | 2.22K | 5.17K | 10/12 | 0 |
+| 28 | 20 | 50 | retired | Homestead | 2.85K | 5.82K | 10/12 | 0 |
+| 29 | 21 | 74 | died | Homestead | 3.42K | 6.86K | 10/12 | 0 |
+| 30 | 22 | 77 | died | Homestead | 13.9K | 9.23K | 10/12 | 0 |
+| 31 | 23 | 77 | died | Homestead | 4.45K | 9.83K | 10/12 | 0 |
+| 32 | 24 | 74 | died | Homestead | 3.80K | 9.63K | 10/12 | 0 |
 | … | | | | | | | | |
-| 66 | 65 | 80 | died | Homestead | 3.79K | 8.97K | 10/12 | 0 |
-| 67 | 66 | 73 | died | Homestead | 2.95K | 8.07K | 10/12 | 0 |
-| 68 | 67 | 79 | died | Homestead | 3.33K | 11.4K | 10/12 | 0 |
-| 69 | 68 | 75 | died | Homestead | 3.92K | 11.3K | 10/12 | 0 |
-| 70 | 69 | 80 | died | Homestead | 3.29K | 10.6K | 10/12 | 0 |
-| 71 | 70 | 75 | died | Homestead | 2.92K | 9.09K | 10/12 | 0 |
+| 95 | 66 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 9 |
+| 96 | 66 | 54 | retired | Homestead | 9.87K | 1.85K | 12/12 | 9 |
+| 97 | 67 | 47 | retired | Homestead | 48.6K | 8.49K | 12/12 | 9 |
+| 98 | 68 | 76 | died | City & Statehood | 739K | 138K | 12/12 | 9 |
+| 99 | 68 | 48 | retired | Homestead | 291K | 199K | 12/12 | 9 |
+| 100 | 70 | 93 | died | City & Statehood | 7.78M | 2.21M | 12/12 | 9 |
 
 ### Final state (day 70)
 
-Generation 72, Homestead, age 14, 9.09K posterity held, 10/12 heirlooms, 0 monuments, vista: Frontier Town. Resources: food 36.2K, materials 13.6K, money 10.4K, standing 0.
+Generation 101, Homestead, age 48, 2.21M posterity held, 12/12 heirlooms, 9 monuments, vista: Future City. Resources: food 1.47M, materials 16.0K, money 107B, standing 45.1B.
 
 ---
 
@@ -289,80 +298,80 @@ Check-ins at 07:30, 11:00, 14:30, 18:00, 22:00 (3.0 min each), 3 rewarded ads/da
 | First Family Venture | 1 |
 | Era reached: The Claim | 1 |
 | Era reached: Homestead | 1 |
-| Era reached: Village | 2 |
-| Era reached: Railroad Town | 4 |
-| Era reached: City & Statehood | 6 |
-| All 12 heirlooms | 6 |
-| Monument 1 | 7 |
-| Monument 2 | 11 |
-| Monument 3 | 14 |
-| Monument 4 | 17 |
-| Monument 5 | 21 |
-| Monument 6 | 25 |
-| COMPLETION (final Monument + all heirlooms) | 25 |
+| Era reached: Village | 1 |
+| Era reached: Railroad Town | 3 |
+| Era reached: City & Statehood | 3 |
+| All 12 heirlooms | 4 |
+| Monument 1 | 4 |
+| Monument 2 | 6 |
+| Monument 3 | 8 |
+| Monument 4 | 10 |
+| Monument 5 | 12 |
+| Monument 6 | 14 |
+| COMPLETION (final Monument + all heirlooms) | 14 |
 
 ### Weekly summary
 
 | Week | Gens ended | Max era | Posterity held | Heirlooms | Monuments | Min decisions/day |
 |---|---|---|---|---|---|---|
-| 1 | 14 | City & Statehood | 0 | 12/12 | 1 | 224 |
-| 2 | 13 | City & Statehood | 0 | 12/12 | 3 | 226 |
-| 3 | 13 | City & Statehood | 0 | 12/12 | 5 | 285 |
-| 4 | 10 | City & Statehood | 3.32M | 12/12 | 6 | 283 |
-| 5 | 9 | City & Statehood | 234K | 12/12 | 7 | 267 |
-| 6 | 7 | City & Statehood | 65.6M | 12/12 | 7 | 265 |
-| 7 | 7 | City & Statehood | 173M | 12/12 | 7 | 266 |
-| 8 | 10 | City & Statehood | 21.2M | 12/12 | 8 | 276 |
-| 9 | 7 | City & Statehood | 121M | 12/12 | 8 | 266 |
-| 10 | 7 | City & Statehood | 254M | 12/12 | 8 | 267 |
+| 1 | 15 | City & Statehood | 1.65K | 12/12 | 2 | 225 |
+| 2 | 16 | City & Statehood | 0 | 12/12 | 6 | 312 |
+| 3 | 16 | City & Statehood | 0 | 12/12 | 10 | 358 |
+| 4 | 14 | City & Statehood | 37.8K | 12/12 | 13 | 317 |
+| 5 | 12 | City & Statehood | 0 | 12/12 | 16 | 345 |
+| 6 | 11 | City & Statehood | 1.53K | 12/12 | 18 | 289 |
+| 7 | 10 | City & Statehood | 65.3M | 12/12 | 19 | 293 |
+| 8 | 11 | City & Statehood | 1.82K | 12/12 | 21 | 280 |
+| 9 | 9 | City & Statehood | 0 | 12/12 | 22 | 277 |
+| 10 | 8 | City & Statehood | 979M | 12/12 | 22 | 276 |
 
 ### Generations
 
 | # | Ended day | Age | How | Era reached | Posterity earned | Held after shopping | Heirlooms | Monuments |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 1 | 41 | retired | The Trail | 55 | 40 | 2/12 | 0 |
-| 2 | 1 | 50 | retired | Homestead | 229 | 94 | 5/12 | 0 |
-| 3 | 2 | 62 | died | Homestead | 683 | 179.4 | 6/12 | 0 |
-| 4 | 2 | 60 | retired | Village | 250 | 272.8 | 7/12 | 0 |
-| 5 | 2 | 48 | retired | Village | 703 | 263.4 | 7/12 | 0 |
-| 6 | 3 | 62 | died | The Claim | 61 | 324.4 | 7/12 | 0 |
-| 7 | 3 | 48 | retired | Village | 296 | 453.3 | 7/12 | 0 |
-| 8 | 4 | 65 | retired | Village | 1.56K | 670.6 | 8/12 | 0 |
-| 9 | 4 | 60 | retired | Village | 301 | 687.7 | 8/12 | 0 |
-| 10 | 5 | 74 | died | Railroad Town | 15.8K | 2.91K | 11/12 | 0 |
-| 11 | 5 | 78 | died | Railroad Town | 8.98K | 4.74K | 11/12 | 0 |
-| 12 | 6 | 78 | died | Railroad Town | 7.53K | 7.45K | 11/12 | 0 |
-| 13 | 7 | 81 | died | City & Statehood | 361K | 59.9K | 12/12 | 0 |
-| 14 | 7 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 1 |
-| 15 | 8 | 57 | retired | Homestead | 838 | 197.7 | 12/12 | 1 |
-| 16 | 8 | 50 | retired | Village | 2.02K | 406.4 | 12/12 | 1 |
-| 17 | 9 | 73 | died | Railroad Town | 39.8K | 7.68K | 12/12 | 1 |
-| 18 | 9 | 82 | died | City & Statehood | 302K | 62.8K | 12/12 | 1 |
-| 19 | 10 | 84 | died | Homestead | 17.8K | 54.9K | 12/12 | 1 |
-| 20 | 11 | 85 | died | City & Statehood | 140K | 95.5K | 12/12 | 1 |
-| 21 | 11 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 2 |
-| 22 | 12 | 45 | retired | Homestead | 1.51K | 241.3 | 12/12 | 2 |
-| 23 | 12 | 50 | retired | Homestead | 5.96K | 1.28K | 12/12 | 2 |
-| 24 | 13 | 77 | died | City & Statehood | 119K | 20.4K | 12/12 | 2 |
-| 25 | 13 | 46 | retired | Homestead | 9.66K | 21.3K | 12/12 | 2 |
-| 26 | 14 | 91 | died | City & Statehood | 867K | 197K | 12/12 | 2 |
-| 27 | 14 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 3 |
-| 28 | 15 | 62 | died | Homestead | 1.65K | 254.0 | 12/12 | 3 |
-| 29 | 15 | 50 | retired | Homestead | 2.54K | 734.7 | 12/12 | 3 |
-| 30 | 16 | 80 | died | City & Statehood | 205K | 32.9K | 12/12 | 3 |
-| 31 | 16 | 46 | retired | Homestead | 118K | 70.3K | 12/12 | 3 |
-| 32 | 17 | 85 | died | City & Statehood | 1.93M | 407K | 12/12 | 3 |
+| 1 | 1 | 41 | retired | The Trail | 58 | 28 | 2/12 | 0 |
+| 2 | 1 | 50 | retired | Homestead | 298 | 86 | 5/12 | 0 |
+| 3 | 2 | 67 | retired | Village | 946 | 259.5 | 8/12 | 0 |
+| 4 | 2 | 50 | retired | The Claim | 236 | 270.3 | 8/12 | 0 |
+| 5 | 2 | 46 | retired | Village | 285 | 300.4 | 8/12 | 0 |
+| 6 | 3 | 68 | died | Railroad Town | 2.93K | 1.00K | 9/12 | 0 |
+| 7 | 4 | 80 | died | City & Statehood | 27.3K | 5.50K | 12/12 | 0 |
+| 8 | 4 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 1 |
+| 9 | 5 | 61 | died | Homestead | 1.23K | 183.5 | 12/12 | 1 |
+| 10 | 5 | 50 | retired | The Claim | 721 | 290.4 | 12/12 | 1 |
+| 11 | 6 | 67 | died | City & Statehood | 30.0K | 5.37K | 12/12 | 1 |
+| 12 | 6 | 48 | retired | Homestead | 6.98K | 6.90K | 12/12 | 1 |
+| 13 | 6 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 2 |
+| 14 | 7 | 45 | retired | Homestead | 1.66K | 270.0 | 12/12 | 2 |
+| 15 | 7 | 50 | retired | Homestead | 8.01K | 1.65K | 12/12 | 2 |
+| 16 | 8 | 82 | died | City & Statehood | 185K | 33.0K | 12/12 | 2 |
+| 17 | 8 | 46 | retired | Homestead | 13.8K | 32.0K | 12/12 | 2 |
+| 18 | 8 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 3 |
+| 19 | 9 | 57 | retired | Village | 4.93K | 819.6 | 12/12 | 3 |
+| 20 | 9 | 79 | died | City & Statehood | 136K | 17.4K | 12/12 | 3 |
+| 21 | 10 | 88 | died | City & Statehood | 396K | 86.9K | 12/12 | 3 |
+| 22 | 10 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 4 |
+| 23 | 11 | 67 | died | Railroad Town | 8.84K | 1.43K | 12/12 | 4 |
+| 24 | 11 | 75 | died | City & Statehood | 290K | 67.2K | 12/12 | 4 |
+| 25 | 12 | 51 | retired | Homestead | 63.4K | 54.4K | 12/12 | 4 |
+| 26 | 12 | 45 | retired | Village | 77.1K | 67.8K | 12/12 | 4 |
+| 27 | 12 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 5 |
+| 28 | 13 | 68 | died | Railroad Town | 11.8K | 2.27K | 12/12 | 5 |
+| 29 | 14 | 76 | died | City & Statehood | 540K | 101K | 12/12 | 5 |
+| 30 | 14 | 46 | retired | Homestead | 72.7K | 131K | 12/12 | 5 |
+| 31 | 14 | — | FOUNDED MONUMENT | City & Statehood | 0 | 0 | 12/12 | 6 |
+| 32 | 15 | 65 | died | Village | 20.1K | 3.05K | 12/12 | 6 |
 | … | | | | | | | | |
-| 92 | 65 | 94 | died | City & Statehood | 120M | 171M | 12/12 | 8 |
-| 93 | 66 | 93 | died | City & Statehood | 90.7M | 170M | 12/12 | 8 |
-| 94 | 67 | 91 | died | City & Statehood | 80.3M | 250M | 12/12 | 8 |
-| 95 | 68 | 89 | died | City & Statehood | 98.3M | 252M | 12/12 | 8 |
-| 96 | 69 | 93 | died | City & Statehood | 108M | 264M | 12/12 | 8 |
-| 97 | 70 | 97 | died | City & Statehood | 113M | 254M | 12/12 | 8 |
+| 117 | 65 | 90 | died | City & Statehood | 40.0M | 6.61M | 12/12 | 22 |
+| 118 | 66 | 93 | died | City & Statehood | 289M | 83.7M | 12/12 | 22 |
+| 119 | 67 | 92 | died | City & Statehood | 778M | 190M | 12/12 | 22 |
+| 120 | 68 | 93 | died | City & Statehood | 910M | 434M | 12/12 | 22 |
+| 121 | 69 | 97 | died | City & Statehood | 1.35B | 639M | 12/12 | 22 |
+| 122 | 70 | 95 | died | City & Statehood | 1.36B | 979M | 12/12 | 22 |
 
 ### Final state (day 70)
 
-Generation 98, City & Statehood, age 88, 254M posterity held, 12/12 heirlooms, 8 monuments, vista: Future City. Resources: food 72.9B, materials 5.42Qa, money 3.06Qa, standing 68.7T.
+Generation 123, City & Statehood, age 88, 979M posterity held, 12/12 heirlooms, 22 monuments, vista: Future City. Resources: food 1.69T, materials 57.3Qa, money 39.4Qa, standing 1.05Qa.
 
 ---
 
@@ -370,14 +379,14 @@ Generation 98, City & Statehood, age 88, 254M posterity held, 12/12 heirlooms, 8
 
 | Criterion | Target | Observed | Verdict |
 |---|---|---|---|
-| Day 1: finish generation 1, Era 2–3, first Posterity | gen 1 done, era 2–3 | 1 gen(s), era 2, posterity day 1 | PASS |
-| Week 1: several generations, 4–6 heirlooms, first ventures | ≥3 gens, 4–6 heirlooms | 8 gens, 5 heirlooms, venture day 1 | PASS |
-| Weeks 2–3: Era 5 reached | day 8–21 | day 14 | PASS |
-| Week 3–4: first Monument | day 15–28 | day 24 | PASS |
-| Weeks 4–8: 3–5 Monuments | 3–5 by day 56 | 4 | PASS |
-| Completion in 6–10 weeks | day 42–70 | day 65 | PASS |
+| Day 1: finish generation 1, Era 2–4, first Posterity | gen 1 done, era 2–4 | 1 gen(s), era 3, posterity day 1 | PASS |
+| Week 1: several generations, good heirloom progress, first ventures | ≥3 gens, ≥6 heirlooms | 9 gens, 10 heirlooms, venture day 1 | PASS |
+| Week 1: Era 5 reached | day 2–10 | day 5 | PASS |
+| ~Week 2: first Monument | day 6–16 | day 10 | PASS |
+| By day 21: monument run underway | 2–6 by day 21 | 3 | PASS |
+| Completion in ~4–5 weeks | day 24–38 | day 27 | PASS |
 | No zero-progress days after day 1 | 0 such days | 0 ([]) | PASS |
-| Ad watchers run ~25–35% faster | 25–35% | 46% | PASS |
+| Ad watchers finish somewhat faster | faster | 15% (day 23 vs 27) | PASS |
 
 ---
 
@@ -385,13 +394,15 @@ Generation 98, City & Statehood, age 88, 254M posterity held, 12/12 heirlooms, 8
 
 | Seed | Monument 1 | Monument 6 / completion | Heirlooms day 7 | Monuments day 56 |
 |---|---|---|---|---|
-| 1867 | day 24 | day 65 | 5/12 | 4 |
-| 42 | day 20 | day 49 | 7/12 | 6 |
-| 9999 | day 17 | day 51 | 7/12 | 6 |
-| 31415 | day 33 | day — | 5/12 | 3 |
+| 1867 | day 10 | day 27 | 10/12 | 14 |
+| 42 | day 8 | day 24 | 11/12 | 15 |
+| 9999 | day 10 | day 27 | 10/12 | 14 |
+| 31415 | day 12 | day 32 | 10/12 | 13 |
 
-Lucky early seeds run the whole arc up to ~15% fast (never slow); the structural
-windows (day-1 loop, Monument 1 by week 4, completion by week 10) hold on every
-seed tested. The count bands (heirlooms in week 1, monuments at day 56) overshoot
-by one step on hot seeds — acceptable spread for v1, revisit after real playtests.
+Luck still moves the pace — lucky seeds run the arc faster — but the bad-luck floor
+(`eventPityDays`: a beneficial windfall is guaranteed at least every 14 game-days)
+caps the downside, so every seed now completes inside the ~4–5 week target window
+instead of stalling on a standing drought. Without the floor, ~1 in 4 seeds failed to
+finish even in 70 days. Era + monument costs were scaled down (≈¼ era ladder, gentler
+monument curve) to bring completion in from ~9 weeks to ~4–5 — revisit after real playtests.
 

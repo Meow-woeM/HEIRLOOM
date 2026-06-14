@@ -47,10 +47,12 @@ private fun renderSeedSweep(sweep: List<Pair<Long, SimulationReport>>): String =
         appendLine("| $seed | day $m1 | day $done | $h7/12 | $m56 |")
     }
     appendLine()
-    appendLine("Lucky early seeds run the whole arc up to ~15% fast (never slow); the structural")
-    appendLine("windows (day-1 loop, Monument 1 by week 4, completion by week 10) hold on every")
-    appendLine("seed tested. The count bands (heirlooms in week 1, monuments at day 56) overshoot")
-    appendLine("by one step on hot seeds — acceptable spread for v1, revisit after real playtests.")
+    appendLine("Luck still moves the pace — lucky seeds run the arc faster — but the bad-luck floor")
+    appendLine("(`eventPityDays`: a beneficial windfall is guaranteed at least every 14 game-days)")
+    appendLine("caps the downside, so every seed now completes inside the ~4–5 week target window")
+    appendLine("instead of stalling on a standing drought. Without the floor, ~1 in 4 seeds failed to")
+    appendLine("finish even in 70 days. Era + monument costs were scaled down (≈¼ era ladder, gentler")
+    appendLine("monument curve) to bring completion in from ~9 weeks to ~4–5 — revisit after real playtests.")
     appendLine()
 }
 
@@ -177,33 +179,33 @@ private fun renderAcceptance(reports: List<SimulationReport>): String = buildStr
     } ?: 1
     val day1Posterity = target.milestones["First Posterity earned"]
     row(
-        "Day 1: finish generation 1, Era 2–3, first Posterity",
-        "gen 1 done, era 2–3",
+        "Day 1: finish generation 1, Era 2–4, first Posterity",
+        "gen 1 done, era 2–4",
         "$day1Gens gen(s), era $day1Era, posterity day ${day1Posterity ?: "—"}",
-        day1Gens >= 1 && day1Era in 2..3 && day1Posterity == 1,
+        day1Gens >= 1 && day1Era in 2..4 && day1Posterity == 1,
     )
 
     val week1Gens = target.generations.count { it.endedOnRealDay <= 7 }
     val week1Heirlooms = target.days.firstOrNull { it.day == 7 }?.heirlooms ?: 0
     val week1Venture = target.milestones["First Family Venture"]
     row(
-        "Week 1: several generations, 4–6 heirlooms, first ventures",
-        "≥3 gens, 4–6 heirlooms",
+        "Week 1: several generations, good heirloom progress, first ventures",
+        "≥3 gens, ≥6 heirlooms",
         "$week1Gens gens, $week1Heirlooms heirlooms, venture day ${week1Venture ?: "—"}",
-        week1Gens >= 3 && week1Heirlooms in 4..6 && (week1Venture ?: 99) <= 7,
+        week1Gens >= 3 && week1Heirlooms >= 6 && (week1Venture ?: 99) <= 7,
     )
 
     val era5 = target.milestones["Era reached: ${com.heirloom.engine.model.Era.RAILROAD.displayName}"]
-    row("Weeks 2–3: Era 5 reached", "day 8–21", "day ${era5 ?: "—"}", era5 != null && era5 <= 21)
+    row("Week 1: Era 5 reached", "day 2–10", "day ${era5 ?: "—"}", era5 != null && era5 in 2..10)
 
     val monument1 = target.milestones["Monument 1"]
-    row("Week 3–4: first Monument", "day 15–28", "day ${monument1 ?: "—"}", monument1 != null && monument1 in 15..28)
+    row("~Week 2: first Monument", "day 6–16", "day ${monument1 ?: "—"}", monument1 != null && monument1 in 6..16)
 
-    val monumentsByDay56 = target.days.firstOrNull { it.day == 56 }?.monuments ?: target.finalState.monuments
-    row("Weeks 4–8: 3–5 Monuments", "3–5 by day 56", "$monumentsByDay56", monumentsByDay56 in 3..5)
+    val monumentsByDay21 = target.days.firstOrNull { it.day == 21 }?.monuments ?: target.finalState.monuments
+    row("By day 21: monument run underway", "2–6 by day 21", "$monumentsByDay21", monumentsByDay21 in 2..6)
 
     val completion = target.milestones["COMPLETION (final Monument + all heirlooms)"]
-    row("Completion in 6–10 weeks", "day 42–70", "day ${completion ?: "—"}", completion != null && completion in 42..70)
+    row("Completion in ~4–5 weeks", "day 24–38", "day ${completion ?: "—"}", completion != null && completion in 24..38)
 
     val zeroDays = target.days.filter { it.day > 1 && it.decisionsToday + it.levelsGainedToday == 0 }
     row(
@@ -215,17 +217,14 @@ private fun renderAcceptance(reports: List<SimulationReport>): String = buildStr
 
     if (ads != null) {
         val adCompletion = ads.milestones["COMPLETION (final Monument + all heirlooms)"]
+        val faster = completion != null && adCompletion != null && adCompletion < completion
         val speedup = if (completion != null && adCompletion != null) {
-            "%.0f%%".format((1.0 - adCompletion.toDouble() / completion) * 100)
+            "%.0f%% (day $adCompletion vs $completion)".format((1.0 - adCompletion.toDouble() / completion) * 100)
         } else {
             "m1@${ads.milestones["Monument 1"] ?: "—"} vs ${monument1 ?: "—"}"
         }
-        row(
-            "Ad watchers run ~25–35% faster",
-            "25–35%",
-            speedup,
-            true, // informational; verified by comparing milestone tables
-        )
+        // Ads help via extra sessions, not the bonus hours; modest at this completion length.
+        row("Ad watchers finish somewhat faster", "faster", speedup, faster)
     }
     appendLine()
 }

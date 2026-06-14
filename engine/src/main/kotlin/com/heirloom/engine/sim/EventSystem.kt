@@ -23,16 +23,49 @@ import kotlin.random.Random
 object EventSystem {
     private const val EPS = 1e-9
 
+    /** Beneficial windfalls that grant resources/standing — the pity floor guarantees these. */
+    private val WINDFALL_EVENTS = listOf(
+        EventType.TRAVELING_MERCHANT,
+        EventType.BARN_RAISING,
+        EventType.COUNTY_FAIR,
+        EventType.NEWCOMERS,
+    )
+
     fun onDayBoundary(state: GameState, config: BalanceConfig, logs: MutableList<EventLogEntry>): GameState {
         var s = countDown(state)
         val rng = Random(s.rngSeed)
         val season = s.season(config)
         val chance = config.eventChancePerDay *
             (if (season == Season.WINTER) config.winterEventChanceMultiplier else 1.0)
+        var windfallFired = false
         if (rng.nextDouble() < chance) {
-            pick(rng, season, s, config)?.let { type -> s = fire(s, type, config, logs) }
+            pick(rng, season, s, config)?.let { type ->
+                s = fire(s, type, config, logs)
+                if (type in WINDFALL_EVENTS) windfallFired = true
+            }
         }
-        return s.copy(rngSeed = rng.nextLong())
+        // Bad-luck floor: a beneficial windfall is guaranteed at least every eventPityDays.
+        var sincePity = if (windfallFired) 0.0 else s.daysSincePityEvent + 1.0
+        if (!windfallFired && config.eventPityDays > 0 && sincePity >= config.eventPityDays) {
+            pickWindfall(rng, config)?.let { type ->
+                s = fire(s, type, config, logs)
+                sincePity = 0.0
+            }
+        }
+        return s.copy(rngSeed = rng.nextLong(), daysSincePityEvent = sincePity)
+    }
+
+    /** Weighted pick among the windfall events (using their normal weights). */
+    private fun pickWindfall(rng: Random, config: BalanceConfig): EventType? {
+        val candidates = WINDFALL_EVENTS.filter { (config.eventWeights[it] ?: 0.0) > 0.0 }
+        if (candidates.isEmpty()) return null
+        val total = candidates.sumOf { config.eventWeights.getValue(it) }
+        var roll = rng.nextDouble() * total
+        for (type in candidates) {
+            roll -= config.eventWeights.getValue(type)
+            if (roll <= 0) return type
+        }
+        return candidates.last()
     }
 
     private fun countDown(state: GameState): GameState {

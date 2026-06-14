@@ -55,6 +55,8 @@ data class GameState(
     val activeEvents: List<ActiveEvent> = emptyList(),
     val eventLog: List<EventLogEntry> = emptyList(),
     val railroadArrivedThisLife: Boolean = false,
+    /** Game-days since the last beneficial windfall event; drives the bad-luck pity floor. */
+    val daysSincePityEvent: Double = 0.0,
 
     // ---- prestige ----
     val heirlooms: Set<HeirloomId> = emptySet(),
